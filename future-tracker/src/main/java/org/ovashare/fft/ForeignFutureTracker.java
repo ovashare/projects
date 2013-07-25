@@ -355,7 +355,7 @@ public class ForeignFutureTracker extends ReentrantLock {
             if (future.isDone()) {
                 T value;
                 try {
-                    // note that we do NOT call listener.onSuccess() inside this try/catch,
+                    // note that we do NOT call listener.operationSuccess() inside this try/catch,
                     // as we only want exceptions that might arise from future.get()
                     value = future.get();
                 } catch (Exception e) {
